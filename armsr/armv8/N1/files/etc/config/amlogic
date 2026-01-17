@@ -1,6 +1,6 @@
 config amlogic 'config'
 	option enable '1'
-	option amlogic_firmware_repo 'https://github.com/HankinsL/Phicomm-N1-ImmortalWrt'
+	option amlogic_firmware_repo 'https://github.com/HankinsL/ImmortalWrt-For-Phicomm-N1'
 	option amlogic_firmware_tag 'ImmortalWrt'
 	option amlogic_firmware_suffix '.img.xz'
 	option amlogic_kernel_path 'https://github.com/ophub/kernel'
