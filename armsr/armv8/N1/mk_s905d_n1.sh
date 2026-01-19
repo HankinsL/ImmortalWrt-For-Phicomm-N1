@@ -172,6 +172,7 @@ adjust_getty_config
 adjust_openssh_config
 use_xrayplug_replace_v2rayplug
 create_fstab_config
+adjust_mosdns_config
 patch_admin_status_index_html
 adjust_kernel_env
 copy_uboot_to_fs
