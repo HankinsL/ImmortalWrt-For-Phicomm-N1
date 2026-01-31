@@ -1,4 +1,4 @@
-name: Build ImmortalWrt-24.10.4 for armsr_armv8
+name: Build ImmortalWrt-24.10 for armsr_armv8
 
 on:
   workflow_dispatch:
@@ -17,7 +17,7 @@ on:
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   REPO_URL: https://github.com/immortalwrt/immortalwrt
-  REPO_BRANCH: v24.10.4
+  REPO_BRANCH: openwrt-24.10
   TZ: Asia/Shanghai
 
 jobs:
@@ -43,10 +43,7 @@ jobs:
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
-        sudo -E apt-get -qq update > /dev/null
-        sudo -E apt-get -qq install -y $(curl -fsSL https://raw.githubusercontent.com/HankinsL/ImmortalWrt-For-Phicomm-N1/master/.github/workflows/openwrt) > /dev/null
-        sudo -E apt-get -qq autoremove --purge > /dev/null
-        sudo -E apt-get -qq clean > /dev/null
+        curl -s https://build-scripts.immortalwrt.org/init_build_environment.sh | sudo bash > /dev/null
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
@@ -95,7 +92,7 @@ jobs:
       env:
         OPENWRT_ARMVIRT: openwrt/bin/targets/armsr/armv8/*rootfs.tar.gz
         KERNEL_REPO_URL: ophub/kernel
-        KERNEL_VERSION_NAME: 6.6.y
+        KERNEL_VERSION_NAME: 6.12.y
         PACKAGE_SOC: diy
         GZIP_IMGS: .xz
         SCRIPT_DIY_PATH: armsr/armv8/N1/mk_s905d_n1.sh
