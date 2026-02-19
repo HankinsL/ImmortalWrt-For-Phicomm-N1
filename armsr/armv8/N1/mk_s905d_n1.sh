@@ -126,8 +126,8 @@ SSHD_CIPHERS="aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes256-ctr,aes192-ct
 check_depends
 
 SKIP_MB=4
-BOOT_MB=256
-ROOTFS_MB=960
+BOOT_MB=512
+ROOTFS_MB=2048
 SIZE=$((SKIP_MB + BOOT_MB + ROOTFS_MB))
 create_image "$TGT_IMG" "$SIZE"
 create_partition "$TGT_DEV" "msdos" "$SKIP_MB" "$BOOT_MB" "fat32" "0" "-1" "btrfs"
@@ -168,11 +168,10 @@ cd $TGT_ROOT
 copy_supplement_files
 extract_glibc_programs
 adjust_openssl_config
+adjust_openclash_config
 adjust_getty_config
 adjust_openssh_config
-use_xrayplug_replace_v2rayplug
 create_fstab_config
-adjust_mosdns_config
 patch_admin_status_index_html
 adjust_kernel_env
 copy_uboot_to_fs
