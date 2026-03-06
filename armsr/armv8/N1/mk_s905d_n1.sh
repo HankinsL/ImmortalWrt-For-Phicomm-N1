@@ -167,9 +167,11 @@ echo "修改根文件系统相关配置 ... "
 cd $TGT_ROOT
 copy_supplement_files
 extract_glibc_programs
+adjust_docker_config
 adjust_openssl_config
 adjust_getty_config
 adjust_openssh_config
+adjust_openclash_config
 use_xrayplug_replace_v2rayplug
 create_fstab_config
 adjust_mosdns_config
