@@ -4,7 +4,7 @@
 [luci-app-amlogic](https://github.com/ophub/luci-app-amlogic)：系统更新、文件传输、CPU 调频等。<br>
 [luci-app-passwall](https://github.com/Openwrt-Passwall/openwrt-passwall)：科学上网。<br>
 [luci-app-openclash](https://github.com/vernesong/OpenClash): 科学上网。<br>
-[luci-app-dockerman](https://github.com/lisaac/luci-app-dockerman)：容器管理。<br>
+[luci-app-podman](https://github.com/Zerogiven-OpenWRT-Packages/luci-app-podman)：容器管理。<br>
 ***
 # 致谢
 本项目修改自nantayo的[N1-OpenWrt](https://github.com/nantayo/N1-OpenWrt)。<br>
