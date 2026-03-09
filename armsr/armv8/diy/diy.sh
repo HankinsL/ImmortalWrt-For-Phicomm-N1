@@ -17,7 +17,6 @@ rm -rf feeds/luci/applications/luci-app-passwall feeds/luci/applications/luci-ap
 cp -rf clone/amlogic/luci-app-amlogic clone/passwall/luci-app-passwall clone/openclash/luci-app-openclash clone/mosdns/luci-app-mosdns clone/adguardhome/luci-app-adguardhome feeds/luci/applications/
 cp -rf clone/golang feeds/packages/lang/
 cp -rf clone/mosdns/mosdns clone/mosdns/v2dat clone/v2ray-geodata feeds/packages/net/
-sed -i '/luci-app-attendedsysupgrade/d' feeds/luci/collections/luci/Makefile
 sed -i 's/llvm=true/llvm=false/' feeds/packages/lang/rust/Makefile
 
 # Clean packages
