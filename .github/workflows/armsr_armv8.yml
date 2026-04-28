@@ -103,6 +103,13 @@ jobs:
         SW_FLOWOFFLOAD: 0
         SFE_FLOW: 0
 
+    - name: Rename firmware files from openwrt to immortalwrt
+      run: |
+        cd "${{ env.PACKAGED_OUTPUTPATH }}"
+        for f in *openwrt*; do
+          mv -- "$f" "${f/openwrt/immortalwrt}"
+        done
+
     - name: Upload firmware to release
       uses: softprops/action-gh-release@master
       with:
