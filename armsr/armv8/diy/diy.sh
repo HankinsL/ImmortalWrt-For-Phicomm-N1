@@ -17,7 +17,6 @@ rm -rf feeds/luci/applications/luci-app-passwall feeds/luci/applications/luci-ap
 cp -rf clone/amlogic/luci-app-amlogic clone/passwall/luci-app-passwall clone/openclash/luci-app-openclash clone/mosdns/luci-app-mosdns feeds/luci/applications/
 cp -rf clone/golang feeds/packages/lang/
 cp -rf clone/mosdns/mosdns clone/mosdns/v2dat clone/v2ray-geodata feeds/packages/net/
-sed -i 's/llvm=true/llvm=false/' feeds/packages/lang/rust/Makefile
 
 # Clean packages
 rm -rf clone
