@@ -1,9 +1,10 @@
 #!/bin/bash
 
 # Adjust source code
+patch -p1 -f < $(dirname "$0")/automount.patch
 patch -p1 -f < $(dirname "$0")/luci.patch
 
-# Add packages
+# clone packages
 git clone https://github.com/ophub/luci-app-amlogic --depth=1 clone/amlogic
 git clone https://github.com/Openwrt-Passwall/openwrt-passwall --depth=1 clone/passwall
 git clone https://github.com/vernesong/OpenClash --depth=1 clone/openclash
@@ -16,7 +17,7 @@ git clone https://github.com/w9315273/luci-app-adguardhome --depth=1 package/luc
 rm -rf feeds/luci/applications/luci-app-passwall feeds/luci/applications/luci-app-openclash feeds/packages/lang/golang feeds/packages/net/mosdns feeds/packages/net/v2ray-geodata
 cp -rf clone/amlogic/luci-app-amlogic clone/passwall/luci-app-passwall clone/openclash/luci-app-openclash clone/mosdns/luci-app-mosdns feeds/luci/applications/
 cp -rf clone/golang feeds/packages/lang/
-cp -rf clone/mosdns/mosdns clone/mosdns/v2dat clone/v2ray-geodata feeds/packages/net/
+cp -rf clone/mosdns/mosdns clone/mosdns/geo2txt clone/v2ray-geodata feeds/packages/net/
 
 # Clean packages
 rm -rf clone
