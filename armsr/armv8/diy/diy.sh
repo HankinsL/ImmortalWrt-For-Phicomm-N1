@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Adjust source code
-patch -p1 -f < $(dirname "$0")/automount.patch
 patch -p1 -f < $(dirname "$0")/luci.patch
 
 # clone packages
 git clone https://github.com/ophub/luci-app-amlogic --depth=1 clone/amlogic
+git clone https://github.com/Zerogiven-OpenWRT-Packages/luci-app-podman --depth=1 feeds/luci/applications/luci-app-podman
 git clone https://github.com/Openwrt-Passwall/openwrt-passwall --depth=1 clone/passwall
 git clone https://github.com/vernesong/OpenClash --depth=1 clone/openclash
 git clone https://github.com/sbwml/luci-app-mosdns --single-branch --depth=1 clone/mosdns
