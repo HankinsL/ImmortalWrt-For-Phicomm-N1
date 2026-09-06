@@ -80,7 +80,7 @@ jobs:
         make -j$(( $(nproc) + 1 )) || make -j1 V=s
 
     - name: Package N1 firmware
-      uses: ophub/flippy-openwrt-actions@main
+      uses: unifreq/openwrt_packit@master
       env:
         OPENWRT_ARMVIRT: openwrt/bin/targets/armsr/armv8/*rootfs.tar.gz
         OPENWRT_VER: ${{ env.REPO_BRANCH }}
