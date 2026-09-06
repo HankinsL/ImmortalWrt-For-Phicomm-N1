@@ -1,8 +1,7 @@
 # 项目简介
-本固件适配斐讯N1旁路由模式，追求轻量（请注意：不具备PPPoE、WiFi相关功能）。<br>
+本固件适配斐讯N1旁路由模式，追求轻量（请注意：不具备docker、PPPoE、WiFi相关功能）。<br>
 固件包含默认皮肤、完整 IPv6 支持，以及下列 luci-app：<br>
 [luci-app-amlogic](https://github.com/ophub/luci-app-amlogic)：系统更新、文件传输、CPU 调频等。<br>
-[luci-app-podman](https://github.com/Zerogiven-OpenWRT-Packages/luci-app-podman)：容器管理。<br>
 [luci-app-passwall](https://github.com/Openwrt-Passwall/openwrt-passwall)：科学上网。<br>
 [luci-app-openclash](https://github.com/vernesong/OpenClash): 科学上网。<br>
 [luci-app-mosdns](https://github.com/sbwml/luci-app-mosdns):  DNS转发器。<br>
