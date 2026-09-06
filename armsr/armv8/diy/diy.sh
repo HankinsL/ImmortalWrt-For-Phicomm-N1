@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Adjust source code
+patch -p1 -f < $(dirname "$0")/automount.patch
 patch -p1 -f < $(dirname "$0")/luci.patch
 
 # clone packages
