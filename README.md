@@ -5,7 +5,7 @@
 [luci-app-passwall](https://github.com/Openwrt-Passwall/openwrt-passwall)：科学上网。<br>
 [luci-app-openclash](https://github.com/vernesong/OpenClash): 科学上网。<br>
 [luci-app-mosdns](https://github.com/sbwml/luci-app-mosdns):  DNS转发器。<br>
-[luci-app-adguardhome](https://github.com/MinimaxFlora/luci-app-adguardhome):  网络广告和跟踪器拦截。<br>
+[luci-app-adguardhome](https://github.com/xiaoxiao29/luci-app-adguardhome):  网络广告和跟踪器拦截。<br>
 ***
 # 致谢
 本项目修改自nantayo的[N1-OpenWrt](https://github.com/nantayo/N1-OpenWrt)。<br>
