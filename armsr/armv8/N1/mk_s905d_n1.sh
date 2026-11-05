@@ -169,6 +169,7 @@ copy_supplement_files
 extract_glibc_programs
 adjust_openssl_config
 adjust_getty_config
+adjust_docker_config
 adjust_openssh_config
 adjust_openclash_config
 use_xrayplug_replace_v2rayplug
