@@ -12,6 +12,13 @@ config interface 'lan'
 	option multipath 'off'
 	option delegate '0'
 
+config interface 'lan6'
+	option proto 'dhcpv6'
+	option device '@lan'
+	option reqaddress 'none'
+	option reqprefix 'auto'
+	option norelease '1'
+
 config globals 'globals'
 	option packet_steering '2'
 	option steering_flows '256'
