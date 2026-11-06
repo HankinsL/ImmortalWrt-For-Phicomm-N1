@@ -73,7 +73,7 @@ jobs:
 
       - name: Upload firmware to release
         run: |
-          tag="OpenWrt_${{ env.FILE_DATE }}"
+          tag="ImmortalWrt_${{ env.FILE_DATE }}"
           gh release create $tag --repo ${{ github.repository }} --title "$tag" --notes "$(printf '首次使用建议全新刷写\n* 基本信息\nIP: 192.168.1.254\n账户: root\n密码: password')" 2> /dev/null || true
           gh release upload $tag ${{ env.PACKAGED_OUTPUTPATH }}/*.img.gz --repo ${{ github.repository }} --clobber
 
