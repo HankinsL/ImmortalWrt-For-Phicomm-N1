@@ -7,7 +7,6 @@ git clone https://github.com/vernesong/OpenClash --depth=1 clone/openclash
 git clone https://github.com/sbwml/luci-app-mosdns --single-branch --depth=1 clone/mosdns
 git clone https://github.com/sbwml/packages_lang_golang --single-branch --depth=1 clone/golang
 git clone https://github.com/sbwml/v2ray-geodata --depth=1 clone/v2ray-geodata
-git clone https://github.com/MIAOBUSI/luci-app-adguardhome --depth=1 package/luci-app-adguardhome
 git clone https://github.com/Zerogiven-OpenWRT-Packages/luci-app-podman --single-branch --depth=1 feeds/luci/applications/luci-app-podman
 
 # Update packages
