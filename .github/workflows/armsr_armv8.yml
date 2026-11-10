@@ -1,4 +1,4 @@
-name: Build ImmortalWrt-25.12 for armsr_armv8
+name: Build ImmortalWrt-24.10 for armsr_armv8
 
 on:
   workflow_dispatch:
@@ -8,7 +8,7 @@ on:
 env:
   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   REPO_URL: https://github.com/immortalwrt/immortalwrt
-  REPO_BRANCH: openwrt-25.12
+  REPO_BRANCH: openwrt-24.10
   TZ: Asia/Shanghai
 
 jobs:
@@ -66,8 +66,9 @@ jobs:
         with:
           openwrt_path: openwrt/bin/targets/armsr/armv8/*rootfs.tar.gz
           openwrt_board: s905d
+          kernel_repo: ophub/kernel
           kernel_usage: flippy
-          openwrt_kernel: 6.12.y
+          openwrt_kernel: 6.6.y
           openwrt_size: 256/1024
           builder_name: HankinsL
 
