@@ -67,7 +67,7 @@ jobs:
           openwrt_path: openwrt/bin/targets/armsr/armv8/*rootfs.tar.gz
           openwrt_board: s905d
           kernel_repo: ophub/kernel
-          kernel_usage: flippy
+          kernel_usage: stable
           openwrt_kernel: 6.6.y
           openwrt_size: 256/1024
           builder_name: HankinsL
